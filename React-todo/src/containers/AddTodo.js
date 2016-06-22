@@ -6,8 +6,7 @@ let AddTodo = ({dispatch})=>{
 	let input;
 	return (
 		<div>
-			<form onSubmit={
-					e=>{
+			<form onSubmit={e => {
 						e.preventDefault();
 						if(!input.value.trim()){
 							return
@@ -27,4 +26,6 @@ let AddTodo = ({dispatch})=>{
 	)
 }
 
-export default AddTodo = connect()(AddTodo);
+AddTodo = connect()(AddTodo);
+
+export default AddTodo;
